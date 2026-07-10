@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime / process
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage & test output
+coverage/
+*.lcov
+.nyc_output/
+
+# Build output
+dist/
+build/
+
+# Caches
+.npm/
+.eslintcache
+.cache/
+
+# Database files (local SQLite / dumps)
+*.sqlite
+*.sqlite3
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Nested guide repo (kept as its own repository)
+/Sequelize-Backend-Guide/
