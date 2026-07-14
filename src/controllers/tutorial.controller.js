@@ -70,9 +70,9 @@ exports.findAll = async (req,res,next)=>{
 
 exports.findOne = async (req,res,next)=>{
     try{
-        const data = await Tutorial.findByPk(req.params.id);
+        const tutorial = await Tutorial.findByPk(req.params.id);
         if(!tutorial){
-            res.status(404).json({message:`Tutorial with this id ${req.params.id} is not found `});
+           return res.status(404).json({message:`Tutorial with this id ${req.params.id} is not found `});
         }
         res.json(tutorial);
     }catch(err){
@@ -105,10 +105,10 @@ exports.findAllPublished = async (req, res, next) => {
 
 //update
 
-exports.update = async (req,res,err)=>{
+exports.update = async (req,res,next)=>{
 
     try{
-        const {id} = req.params.id;
+        const id = req.params.id;
 
         const [affected] = await Tutorial.update(req.body,{
             where:{id},
