@@ -15,6 +15,6 @@ const db={};
 db.Sequelize=Sequelize; // database instance created
 db.sequelize=sequelize;
 
-db.Tutorial=require("./tutorialModel.js")(sequelize,DataTypes);
+db.tutorials=require("./tutorialModel.js")(sequelize,DataTypes);
 
 module.exports=db;

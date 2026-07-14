@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
-module.exports= (Sequelize, DataTypes)=>{
+module.exports= (sequelize, DataTypes)=>{
     const Tutorial = sequelize.define("tutorial",
         {
             title:{
@@ -25,7 +25,7 @@ module.exports= (Sequelize, DataTypes)=>{
             },
 
             views:{
-                type:DataTypes.Integer.UNSIGNED,
+                type:DataTypes.INTEGER.UNSIGNED,
                 defaultValue:0,
             },
 
